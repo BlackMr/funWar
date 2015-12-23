@@ -1,0 +1,17 @@
+{
+  "name": "funWar",
+  "description": "real time fun game",
+  "main": "app.js",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node app.js"
+                },
+  "dependencies": {
+    "express": "latest"
+  },
+  "devDependencies": {
+  },
+  "engines": { "node": "0.12.7",
+  "npm":"2.13.1"
+  }
+}
