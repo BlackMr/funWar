@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var morgan = require('morgan');             // log requests to the console (express4)
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override');
+
 mongoose.connect('mongodb://localhost/myAppDatabase');
 //mongoose.connect('mongodb://node:nodeuser@mongo.onmodulus.net:27017/uwO3mypu');
 
@@ -17,9 +18,9 @@ app.use(express.static(__dirname + '/public'));                 // set the stati
     app.use(methodOverride());
 
  
-app.get('/', function (req,res)
+app.get('/', function(req,res)
 { 
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/public/views/index.html');
 
 });
 

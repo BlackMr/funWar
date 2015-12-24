@@ -1,0 +1,60 @@
+
+body{
+	margin: 0 auto;
+	padding: 5px 5px 5px 5px;
+}
+.container{
+	margin: 5px 5px 5px 5px;
+	padding:5px 5px 5px 5px;
+	width:1200px;
+	height:2000px;
+	background-color: #ff3388;
+	border:solid;
+}
+.smgoPicture{
+	border:dashed;
+	
+}
+.blocks{
+	border:solid;
+	display:inline-block;
+	float:left;
+}
+.chatWindow{
+	position: relative;
+	
+	border:solid;
+	width:1200px;
+	height:400px;
+	
+	
+	
+}
+.namesOnChatRoom{
+	float:left;
+	left:10px;
+	list-style-type: none;
+
+	background-color: white;
+	}
+.chatPlace{
+	float:right;
+	background-color:white;
+	border:solid;
+	height:450px;
+	width:600px;
+}
+.messagesOnChatRoom{
+	list-style-type: none;
+}
+.block-list{
+	list-style-type: none;
+	position:relative;
+	top:100px;
+	left:200px;
+}
+#delPic{
+
+	width:20px;
+	height:20px;
+}
