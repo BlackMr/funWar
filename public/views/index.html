@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="usrs">
 <head>
 	<title>funWar</title>
 
@@ -7,16 +7,37 @@
 	<link rel="stylesheet" type="text/css" href="../dist/css/style.min.css">
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 
 
 
 </head>
-<body>
+<body ng-controller="mainController">
 <h1 id="funWar">FUNWAR</h1>
 <input type="text" id="name"></input>
 
+<h1>{{users.length}}</h1>
+
+<div class="checkbox" ng-repeat="user in users">
+                    <label>
+                        <input type="checkbox" ng-click="deleteUser(user._id)"> {{ user.name }}
+                    </label>
+</div>
+
+<form>
+    <div class="form-group">
+
+        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+        <input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
+    </div>
+
+    <!-- createToDo() WILL CREATE NEW TODOS -->
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+</form>
 
 <script src='../src/js/core.js'></script>
 
 </body>
 </html>
+
+
