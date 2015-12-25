@@ -19,12 +19,12 @@ module.exports = function(grunt) {
         reporter: require('jshint-stylish') // use jshint-stylish to make our errors look and read good
       },
       dev: { 
-      files: { 'public/dist/js/core.min.js': ['public/src/js/core.js', 'public/src/js/core.js'] } 
+      files: { 'public/dist/js/core.min.js': 'public/src/js/core.js' } 
     }, 
 
       // when this task is run, lint the Gruntfile and all js files in public/src 
     build: {
-      files: {'public/dist/js/core.min.js': ['public/src/**/*.js']}
+      files: {'public/dist/js/core.min.js': 'public/src/**/*.js'}
       }
       },
 
