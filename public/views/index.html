@@ -14,13 +14,12 @@
 </head>
 <body ng-controller="mainController">
 <h1 id="funWar">FUNWAR</h1>
-<input type="text" id="name"></input>
 
 <h1>{{users.length}}</h1>
 
 <div class="checkbox" ng-repeat="user in users">
                     <label>
-                        <input type="checkbox" ng-click="deleteUser(user._id)"> {{ user.name }}
+                        <input type="checkbox" ng-click="deleteUser(user._id)"> {{ user.name }}{{ user.username }} {{ user.password }}
                     </label>
 </div>
 
@@ -28,11 +27,13 @@
     <div class="form-group">
 
         <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-        <input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
+        <input type="text" placeholder="Add user" ng-model="formData.username">
+        <!-- <input type="text" name="name" placeholder="Add user" ng-model="formData.text">
+        <input type="text" name="name" placeholder="Add user" ng-model="formData.text"> -->
     </div>
 
     <!-- createToDo() WILL CREATE NEW TODOS -->
-    <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Addddd</button>
+    <button type="submit" ng-click="createUser()">Add</button>
 </form>
 
 <script src='../src/js/core.js'></script>

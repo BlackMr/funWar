@@ -72,28 +72,36 @@ newUser.save(function(err) {
         });
     });
 
-    // create todo and send back all todos after creation
+    // create user and send back all todos after creation
     app.post('/api/users', function(req, res) {
 
-        // create a todo, information comes from AJAX request from Angular
+        // create a user, information comes from AJAX request from Angular
         User.create({
-            text : req.body.text,
+            name : "Test",
+            username:req.body.username,
+            password: "123456",
             done : false
         }, function(err, user) {
-            if (err)
+                if (err) {
                 res.send(err);
-
+                //console.log("HATA1");
+                } else {
             // get and return all the todos after you create another
             User.find(function(err, users) {
+
                 if (err)
                     res.send(err)
+                     
                 res.json(users);
+                //res.send(JSON.stringify(User));
             });
+        }
+        
         });
 
     });
 
-    // delete a todo
+    // delete a user
     app.delete('/api/users/:user_id', function(req, res) {
         User.remove({
             _id : req.params.user_id

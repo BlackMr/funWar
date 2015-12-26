@@ -28,7 +28,7 @@ function mainController($scope, $http) {
             });
     };
 
-    // delete a todo after checking it
+    // delete a user after checking it
     $scope.deleteUser = function(id) {
         $http.delete('/api/users/' + id)
             .success(function(data) {
