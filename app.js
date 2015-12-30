@@ -6,7 +6,7 @@ var morgan = require('morgan');             // log requests to the console (expr
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override');
 
-mongoose.connect('mongodb://localhost/myAppDatabase');
+mongoose.connect('mongodb://kaan:12345@ds037165.mongolab.com:37165/funwar');
 //mongoose.connect('mongodb://node:nodeuser@mongo.onmodulus.net:27017/uwO3mypu');
 
 
@@ -124,6 +124,10 @@ app.get('*', function(req,res)
   res.sendFile(__dirname + '/public/views/index.html');
 
 });
+
+process.on('uncaughtException', function (err) {
+    console.log(err);
+}); 
 
 
 server.listen(process.env.PORT || 8080);
